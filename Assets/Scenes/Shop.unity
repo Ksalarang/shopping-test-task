@@ -2772,7 +2772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 1043163747}
   _camera: {fileID: 330585545}
-  _sensitivity: 10
+  _sensitivity: 7
   _maxCameraDelta: 10
 --- !u!1 &1101493692
 GameObject:
