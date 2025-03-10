@@ -26,7 +26,7 @@ namespace Shopping.Player
             var cameraRight = cameraTransform.right;
 
             cameraForward.y = cameraRight.y = 0;
-            var direction = (cameraForward * movementInput.y + cameraRight * movementInput.x).normalized;
+            var direction = cameraForward * movementInput.y + cameraRight * movementInput.x;
 
             _rigidbody.MovePosition(transform.position + direction * (_speed * Time.deltaTime));
         }

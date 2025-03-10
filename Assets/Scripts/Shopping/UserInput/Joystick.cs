@@ -23,10 +23,11 @@ namespace Shopping.UserInput
 
         public void OnDrag(PointerEventData eventData)
         {
-            var delta = (Vector3)eventData.position - _background.position;
-            delta = Vector3.ClampMagnitude(delta, _background.rect.width / 2f);
+            var maxDelta = _background.rect.width / 2f;
+            var delta = Vector3.ClampMagnitude((Vector3)eventData.position - _background.position, maxDelta);
             _handle.localPosition = delta;
-            _value = delta.normalized;
+            _value.x = delta.x / maxDelta;
+            _value.y = delta.y / maxDelta;
         }
 
         public void OnPointerUp(PointerEventData eventData)
