@@ -18,10 +18,14 @@ namespace Shopping
         [SerializeField]
         private EventSystem _eventSystem;
 
+        [SerializeField]
+        private Camera _camera;
+
         public override void InstallBindings()
         {
             Container.BindInstance(_graphicRaycaster);
             Container.BindInstance(_eventSystem);
+            Container.BindInstance(_camera);
 
             Container.Bind<IMovementInput>().FromInstance(_joystick);
 

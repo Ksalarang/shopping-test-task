@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using System;
+using JetBrains.Annotations;
 using Shopping.Utils;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,6 +11,7 @@ namespace Shopping.UserInput
     [UsedImplicitly]
     public class MobileCameraInput : ICameraInput, ITickable
     {
+        public event Action<Collider> OnClick; //todo:
         public Vector2 Delta => _delta;
 
         [Inject]
