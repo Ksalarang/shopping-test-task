@@ -19,6 +19,7 @@ namespace Shopping.UserInput
         public void OnPointerDown(PointerEventData eventData)
         {
             _dragging = true;
+            OnDrag(eventData);
         }
 
         public void OnDrag(PointerEventData eventData)
