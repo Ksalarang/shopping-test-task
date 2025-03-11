@@ -1,1 +1,1 @@
-В редакторе можно использовать WASD для ходьбы.
+Use WASD while in editor to move.
