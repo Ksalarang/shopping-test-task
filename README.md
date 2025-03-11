@@ -1,1 +1,1 @@
-Use WASD while in editor to move.
+You can use WASD to move while in editor.
