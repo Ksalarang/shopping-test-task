@@ -19,6 +19,9 @@ namespace Shopping.Player
         [Inject(Id = ButtonId.DropItem)]
         private Button _dropItemButton;
 
+        [Inject(Id = TransformId.World)]
+        private Transform _world;
+
         private Item _currentItem;
 
         private void Awake()
@@ -61,7 +64,7 @@ namespace Shopping.Player
         private void DropItem()
         {
             var itemScale = _currentItem.transform.localScale;
-            _currentItem.transform.parent = null;
+            _currentItem.transform.parent = _world;
             _currentItem.transform.localScale = MathUtils.MultiplyComponents(itemScale, transform.localScale);
             _currentItem.Rigidbody.isKinematic = _currentItem.Collider.isTrigger = false;
             _currentItem.Rigidbody.AddForce(transform.forward * _itemsPickUpConfig.DropForce, ForceMode.Impulse);

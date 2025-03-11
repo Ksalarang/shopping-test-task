@@ -26,6 +26,9 @@ namespace Shopping
         [SerializeField]
         private Button _dropItemButton;
 
+        [SerializeField]
+        private Transform _worldTransform;
+
         [Header("Configs")]
         [SerializeField]
         private ItemsPickUpConfig _itemsPickUpConfig;
@@ -36,6 +39,7 @@ namespace Shopping
             Container.BindInstance(_eventSystem);
             Container.BindInstance(_camera);
             Container.BindInstance(_dropItemButton).WithId(ButtonId.DropItem);
+            Container.BindInstance(_worldTransform).WithId(TransformId.World);
 
             Container.BindInstance(_itemsPickUpConfig);
 
