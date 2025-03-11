@@ -120,11 +120,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c68fbfadc474e927672f66e93f398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Type>k__BackingField: 2
   <Rigidbody>k__BackingField: {fileID: 4925438290351219920}
+  <Collider>k__BackingField: {fileID: 5275958721354085714}
 --- !u!54 &4925438290351219920 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 721588304022702621, guid: 46a03251388486940a04b11ee1066b29,
+    type: 3}
+  m_PrefabInstance: {fileID: 5645601582094773965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &5275958721354085714 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 535589958804265887, guid: 46a03251388486940a04b11ee1066b29,
     type: 3}
   m_PrefabInstance: {fileID: 5645601582094773965}
   m_PrefabAsset: {fileID: 0}
